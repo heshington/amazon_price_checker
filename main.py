@@ -30,15 +30,15 @@ if float(amazon_price) <= target_price:
 
     ##Send email
     # Sending Email with Python
-    my_email = "snrubnz@gmail.com"
-    password = "Thesims10"
+    my_email = "FROM_EMAIL"
+    password = "EMAIL_PASSWORD"
 
     with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.starttls()
         connection.login(user=my_email, password=password)
         connection.sendmail(
             from_addr=my_email,
-            to_addrs="hiren6@gmail.com",
+            to_addrs="TO_SEND_EMAIL",
             msg=f"Subject:Amazon Price Alert!\n\n"
                 f"{item_title} has fallen below your target price of ${target_price}, it is now ${amazon_price}. \n"
                 f"You can buy it now at \n "
